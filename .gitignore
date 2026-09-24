@@ -1,0 +1,21 @@
+# WorkBuddy 本地工程数据
+.workbuddy/
+.test/
+.wbapp_*.genie
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 依赖 / 日志
+node_modules/
+npm-debug.log*
+
+# 临时凭据 / 一次性脚本（绝对不能提交）
+.token.tmp
+.gitcred.tmp
+*.token
+.upload_gh.py

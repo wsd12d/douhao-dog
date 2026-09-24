@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF9F3">
+<meta name="description" content="逗号的专属生活日记 —— 记录每天的三餐、照片和小心情">
+<title>逗号宝宝生活日记 🐾</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23FF8A3D'%3E%3Cellipse cx='12' cy='16' rx='4.8' ry='4'/%3E%3Cellipse cx='5.4' cy='10.4' rx='2.6' ry='3.3'/%3E%3Cellipse cx='9.9' cy='6.7' rx='2.6' ry='3.4'/%3E%3Cellipse cx='14.6' cy='6.7' rx='2.6' ry='3.4'/%3E%3Cellipse cx='19' cy='10.4' rx='2.6' ry='3.3'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css?v=2.1.0">
+</head>
+<body>
+<div class="bg-deco"></div>
+
+<!-- ============ 图标库 ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-paw" viewBox="0 0 24 24">
+    <ellipse cx="12" cy="16" rx="4.7" ry="3.9"/>
+    <ellipse cx="5.5" cy="10.5" rx="2.5" ry="3.2"/>
+    <ellipse cx="9.9" cy="6.8" rx="2.5" ry="3.3"/>
+    <ellipse cx="14.5" cy="6.8" rx="2.5" ry="3.3"/>
+    <ellipse cx="18.9" cy="10.5" rx="2.5" ry="3.2"/>
+  </symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" d="M8.7 3.4h6.6l1.3 2.1h2.2A2.5 2.5 0 0 1 21.3 8v9a2.5 2.5 0 0 1-2.5 2.5H5.2A2.5 2.5 0 0 1 2.7 17V8a2.5 2.5 0 0 1 2.5-2.5h2.2l1.3-2.1Zm3.3 13.2a3.7 3.7 0 1 0 0-7.4 3.7 3.7 0 0 0 0 7.4Zm0-1.9a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6Z"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4.5"/>
+    <path d="M12 1.5v2.9M12 19.6v2.9M1.5 12h2.9M19.6 12h2.9M4.6 4.6l2 2M17.4 17.4l2 2M19.4 4.6l-2 2M6.6 17.4l-2 2"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24">
+    <path d="M2.4 10.6h19.2a.9.9 0 0 1 .9 1.1c-.8 4.5-4.6 7.8-9.5 7.8s-8.7-3.3-9.5-7.8a.9.9 0 0 1 .9-1.1Z"/>
+    <path d="M1.6 10.6h20.8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none"/>
+    <circle cx="8.8" cy="7.2" r="1.35"/><circle cx="13" cy="6.4" r="1.35"/><circle cx="15.4" cy="8.6" r="1.05"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24">
+    <path d="M20.6 14.8A9.1 9.1 0 0 1 9.2 3.4a9.3 9.3 0 1 0 11.4 11.4Z"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <path d="M20.5 6.3 9.6 17.2 3.5 11.1" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-left" viewBox="0 0 24 24">
+    <path d="M15 4.6 7.6 12l7.4 7.4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-right" viewBox="0 0 24 24">
+    <path d="M9 4.6 16.4 12 9 19.4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24">
+    <path d="M12 2.1a6.3 6.3 0 0 0-6.3 6.3v3.3L4.2 14.8a.95.95 0 0 0 .85 1.35h13.9a.95.95 0 0 0 .85-1.35l-1.5-3.1V8.4A6.3 6.3 0 0 0 12 2.1Z"/>
+    <path d="M9.3 18.6a2.8 2.8 0 0 0 5.4 0Z"/>
+  </symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="3.3" fill="none" stroke="currentColor" stroke-width="2.1"/>
+    <circle cx="12" cy="12" r="8.3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-dasharray="2.9 2.9" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-x" viewBox="0 0 24 24">
+    <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24">
+    <path d="M4.4 6.4h15.2M9.6 6.4V4.5a1.1 1.1 0 0 1 1.1-1.1h2.6a1.1 1.1 0 0 1 1.1 1.1v1.9M6.5 6.4l1 12.5a1.7 1.7 0 0 0 1.7 1.6h5.6a1.7 1.7 0 0 0 1.7-1.6l1-12.5"
+          fill="none" stroke="currentColor" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24">
+    <path d="M4 20.1h4.3L18.6 9.8a2.15 2.15 0 0 0-3-3L5.3 17 4 20.1Z"/>
+  </symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24">
+    <path d="M12 20.4S3.5 15 3.5 9.3A4.7 4.7 0 0 1 12 6.6a4.7 4.7 0 0 1 8.5 2.7c0 5.7-8.5 11.1-8.5 11.1Z"/>
+  </symbol>
+  <symbol id="i-down" viewBox="0 0 24 24">
+    <path d="M12 3.2v11.4M7.4 10.2 12 14.8l4.6-4.6M4 20.4h16"
+          fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-up" viewBox="0 0 24 24">
+    <path d="M12 14.8V3.4M7.4 8 12 3.4 16.6 8M4 20.4h16"
+          fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-bone" viewBox="0 0 24 24">
+    <path d="M8.2 15.8 15.8 8.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="5.6" cy="5.6" r="2.9"/><circle cx="9.3" cy="9.3" r="2.3"/>
+    <circle cx="18.4" cy="18.4" r="2.9"/><circle cx="14.7" cy="14.7" r="2.3"/>
+  </symbol>
+  <symbol id="i-image" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" d="M4.8 3.2h14.4a2.4 2.4 0 0 1 2.4 2.4v12.8a2.4 2.4 0 0 1-2.4 2.4H4.8a2.4 2.4 0 0 1-2.4-2.4V5.6a2.4 2.4 0 0 1 2.4-2.4Zm2 3.6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-2.2 12.6h14.8l-5-6.4-3.4 4.2-2.4-2.6-4 4.8Z"/>
+  </symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24">
+    <path d="M7.4 18.6A4.9 4.9 0 0 1 7 8.9a5.6 5.6 0 0 1 10.7 1.4 4.2 4.2 0 0 1-.8 8.3H7.4Z"/>
+  </symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24">
+    <path d="M2.6 7.4 6.9 11l4-6.4a1.3 1.3 0 0 1 2.2 0l4 6.4 4.3-3.6a1.2 1.2 0 0 1 1.9 1.2l-1.9 8.3a1.4 1.4 0 0 1-1.37 1.1H5.97A1.4 1.4 0 0 1 4.6 16.9L2.7 8.6a1.2 1.2 0 0 1 1.9-1.2Z"/>
+  </symbol>
+  <symbol id="i-pencil-line" viewBox="0 0 24 24">
+    <path d="M4 20.1h4.3L18.6 9.8a2.15 2.15 0 0 0-3-3L5.3 17 4 20.1Z"/>
+  </symbol>
+</svg>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <span class="logo"><svg><use href="#i-paw"></use></svg></span>
+      <span>逗号的生活日记<small> · DOUHAO DIARY</small></span>
+    </div>
+    <nav class="nav-links">
+      <a href="#today">每日打卡</a>
+      <a href="#album">相册</a>
+      <a href="#calendar">日历</a>
+      <a href="#settings">设置</a>
+    </nav>
+    <div class="nav-status off" id="navStatus">
+      <span class="dot"></span><span id="navStatusText">加载中…</span>
+    </div>
+    <div id="userBox" style="display:none"></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ Hero ============ -->
+  <section class="hero card">
+    <div class="avatar-box">
+      <img class="avatar" id="heroAvatar" src="assets/photos/douhao-08.jpg" alt="逗号">
+      <span class="avatar-badge"><svg><use href="#i-paw"></use></svg></span>
+    </div>
+    <div class="hero-info">
+      <div class="hero-name">逗号 <span class="tag" id="heroTag">2 岁 · 白色小毛球</span></div>
+      <div class="hero-sub">每天三顿饭，顿顿都要拍下来 · 三餐每顿最多 5 张照片，日常照片想传就传</div>
+      <div class="hero-quote"><svg><use href="#i-heart"></use></svg><span id="heroQuote">今天也要好好吃饭饭哦～</span></div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b id="statStreak">0</b><span>连续打卡（天）</span></div>
+      <div class="stat"><b id="statMeals">0</b><span>累计记录（餐）</span></div>
+      <div class="stat"><b id="statPhotos">0</b><span>照片（张）</span></div>
+    </div>
+  </section>
+
+  <!-- 到点提醒横幅 -->
+  <div id="bannerHost"></div>
+
+  <!-- ============ 每日打卡 ============ -->
+  <section class="sec" id="today">
+    <div class="sec-head">
+      <div class="sec-title"><span class="bar"></span>每日打卡</div>
+      <div class="date-nav">
+        <button id="prevDay" title="前一天"><svg><use href="#i-left"></use></svg></button>
+        <span class="date-text" id="dateText">—</span>
+        <button id="nextDay" title="后一天"><svg><use href="#i-right"></use></svg></button>
+        <button class="today-btn" id="todayBtn">回到今天</button>
+        <button class="refresh-btn" id="btnRefresh" title="看看大家有没有新记录">
+          <svg><use href="#i-cloud"></use></svg><span>刷新</span>
+        </button>
+      </div>
+      <div class="day-progress">
+        <svg class="ring" viewBox="0 0 44 44">
+          <circle class="bg" cx="22" cy="22" r="18"></circle>
+          <circle class="fg" id="ringFg" cx="22" cy="22" r="18"
+                  stroke-dasharray="0 113.1" transform="rotate(-90 22 22)"></circle>
+        </svg>
+        <span class="txt"><span class="ring-num" id="ringNum">0/3</span><br>今日完成</span>
+      </div>
+    </div>
+    <div class="meals" id="meals"></div>
+  </section>
+
+  <!-- ============ 相册 ============ -->
+  <section class="sec" id="album">
+    <div class="sec-head">
+      <div class="sec-title"><span class="bar"></span>逗号的回忆墙</div>
+      <div class="sec-desc" id="memoryDesc">三餐照片和日常随手拍都会出现在这里，点爱心给它投票</div>
+    </div>
+    <div class="memory-strip" id="memoryStrip"></div>
+
+    <div class="sec-head" style="margin-top:26px">
+      <div class="sec-title"><span class="bar"></span>打卡相册</div>
+      <div class="sec-desc" id="albumCountDesc">按日期倒序排列</div>
+    </div>
+    <div id="albumTimeline"></div>
+
+    <div class="sec-head" style="margin-top:26px">
+      <div class="sec-title"><span class="bar"></span>日常随手拍</div>
+      <div class="sec-desc" id="dailyDesc">三餐之外的照片都可以放这里</div>
+    </div>
+    <div class="set-actions" style="margin-bottom:16px">
+      <button class="btn btn-mint" id="btnDailyUpload" style="padding:11px 18px;align-self:flex-start">
+        <svg><use href="#i-camera"></use></svg>上传日常照片
+      </button>
+    </div>
+    <div class="daily-grid" id="dailyGrid"></div>
+  </section>
+
+  <!-- ============ 日历 ============ -->
+  <section class="sec" id="calendar">
+    <div class="sec-head">
+      <div class="sec-title"><span class="bar"></span>打卡日历</div>
+      <div class="sec-desc">看看这个月逗号吃得好不好</div>
+    </div>
+    <div class="card cal-card">
+      <div class="cal-head">
+        <button class="cal-nav" id="calPrev"><svg><use href="#i-left"></use></svg></button>
+        <span class="cal-month" id="calMonth">—</span>
+        <button class="cal-nav" id="calNext"><svg><use href="#i-right"></use></svg></button>
+        <span class="spacer"></span>
+        <button class="btn btn-ghost" id="calToday" style="padding:7px 14px;font-size:12.5px">本月</button>
+      </div>
+      <div class="cal-week">
+        <div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div><div>日</div>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="cal-legend">
+        <span><i class="a"></i>三餐都记好了</span>
+        <span><i class="b"></i>记了一部分</span>
+        <span><i class="c"></i>还没记录</span>
+        <span style="margin-left:auto;color:var(--mint-deep);font-weight:700" id="calSummary"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 设置 ============ -->
+  <section class="sec" id="settings">
+    <div class="sec-head">
+      <div class="sec-title"><span class="bar"></span>提醒与设置</div>
+    </div>
+    <div class="set-grid">
+
+      <div class="card set-card">
+        <h3><svg><use href="#i-bell"></use></svg>用餐提醒时间</h3>
+        <p>到点了会在这个页面弹出提醒，也可以发送系统通知</p>
+        <div id="remindRows"></div>
+        <div class="set-actions" style="margin-top:14px;flex-direction:row;flex-wrap:wrap;gap:9px">
+          <button class="btn btn-mint" id="btnNotify" style="padding:10px 16px">
+            <svg><use href="#i-bell"></use></svg>开启系统通知
+          </button>
+          <button class="btn btn-ghost" id="btnTestSound" style="padding:10px 16px">
+            <svg><use href="#i-heart"></use></svg>试听提醒音
+          </button>
+        </div>
+        <div class="hint" style="margin-top:14px">
+          <b>小贴士：</b>网页提醒需要这个页面保持在后台或前台开着（手机可以「添加到主屏幕」）。<br>
+          想让提醒更靠谱？可以让我在每天 <b>9:30 / 12:10 / 23:30</b> 直接给你发消息提醒，不依赖页面是否打开。
+        </div>
+      </div>
+
+      <div class="card set-card">
+        <h3><svg><use href="#i-paw"></use></svg>我的称呼</h3>
+        <p>打卡记录上会显示这个名字，方便家人知道是谁记的</p>
+        <div class="auth-field" style="margin-bottom:6px">
+          <input class="input" id="nickInput" type="text" placeholder="比如：萱萱、妈妈、二姨" maxlength="16">
+        </div>
+        <div class="hint" style="margin-top:10px">
+          改完按回车或者点到别处就会保存，以后大家看到你的记录就是这个名字啦。
+        </div>
+      </div>
+
+      <div class="card set-card">
+        <h3><svg><use href="#i-cloud"></use></svg>数据与备份</h3>
+        <p>所有记录和照片都同步在云端，家里每个人登录后都能看到</p>
+        <div class="storage-bar"><i id="storageFill"></i></div>
+        <div style="font-size:12.5px;color:var(--ink-2);margin-bottom:16px" id="storageText">正在统计…</div>
+        <div class="set-actions">
+          <button class="btn btn-ghost btn-block" id="btnExport"><svg><use href="#i-down"></use></svg>导出备份（JSON）</button>
+          <button class="btn btn-ghost btn-block" id="btnImport"><svg><use href="#i-up"></use></svg>从备份恢复</button>
+          <button class="btn btn-ghost btn-block" id="btnLogout2"><svg><use href="#i-x"></use></svg>退出登录</button>
+          <button class="btn btn-danger btn-block" id="btnClear"><svg><use href="#i-trash"></use></svg>清空全部记录</button>
+        </div>
+        <div class="hint" style="margin-top:14px">
+          每个人用自己的邮箱登录，记下来的内容大家都能看见；自己记的可以改、可以删，别人的只能看。
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <b>逗号</b> 的专属日记本 · 每一天都值得被记下来 🐾<br>
+    <span style="font-size:11.5px">记录与照片同步在云端，家人登录后共同可见 · <span id="footVersion">v2.1</span></span>
+  </div>
+</footer>
+
+<div class="toast-box" id="toastBox"></div>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" id="lbClose"><svg><use href="#i-x"></use></svg></button>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<input type="file" id="filePicker" accept="image/*" multiple class="hidden-file">
+<input type="file" id="dailyPicker" accept="image/*" multiple class="hidden-file">
+<input type="file" id="importPicker" accept="application/json,.json" class="hidden-file">
+
+<!-- ============ 登录 / 注册 ============ -->
+<div class="auth-wrap" id="authWrap">
+  <div class="auth-card">
+    <div class="auth-logo"><svg><use href="#i-paw"></use></svg></div>
+    <div class="auth-title">逗号的生活日记</div>
+    <div class="auth-sub">登录后才能给逗号打卡哦～<br>登录之后，<b>大家记录的内容都能互相看见</b></div>
+
+    <div class="auth-tabs" role="tablist">
+      <button type="button" data-tab="pwd" aria-selected="true">密码登录</button>
+      <button type="button" data-tab="otp" aria-selected="false">验证码登录</button>
+      <button type="button" data-tab="reg" aria-selected="false">注册</button>
+    </div>
+
+    <div class="auth-pane on" data-pane="pwd">
+      <form id="formPwd" autocomplete="on">
+        <div class="auth-field">
+          <label for="pwdEmail">邮箱</label>
+          <input class="input" id="pwdEmail" type="email" placeholder="your@email.com" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="pwdPass">密码</label>
+          <input class="input" id="pwdPass" type="password" placeholder="请输入密码" autocomplete="current-password" required>
+        </div>
+        <button class="btn btn-main auth-submit" id="btnPwdLogin" type="submit">登录</button>
+      </form>
+      <div class="auth-foot"><button type="button" id="goForgot">忘记密码了？</button></div>
+    </div>
+
+    <div class="auth-pane" data-pane="otp">
+      <form id="formOtp" autocomplete="on">
+        <div class="auth-field">
+          <label for="otpEmail">邮箱</label>
+          <div class="auth-input-row">
+            <input class="input" id="otpEmail" type="email" placeholder="your@email.com" autocomplete="email" required>
+            <button class="btn-code" id="btnSendCode" type="button">获取验证码</button>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="otpCode">验证码</label>
+          <input class="input" id="otpCode" type="text" inputmode="numeric" placeholder="6 位数字" autocomplete="one-time-code" required>
+        </div>
+        <button class="btn btn-main auth-submit" id="btnOtpLogin" type="submit">登录</button>
+      </form>
+      <div class="auth-foot" style="color:var(--ink-3)">没注册过的邮箱也能直接用，会自动帮你注册</div>
+    </div>
+
+    <div class="auth-pane" data-pane="reg">
+      <form id="formReg" autocomplete="on">
+        <div class="auth-field">
+          <label for="regName">你的称呼（可选）</label>
+          <input class="input" id="regName" type="text" placeholder="比如：萱萱、妈妈、二姨" maxlength="16" autocomplete="nickname">
+        </div>
+        <div class="auth-field">
+          <label for="regEmail">邮箱</label>
+          <div class="auth-input-row">
+            <input class="input" id="regEmail" type="email" placeholder="your@email.com" autocomplete="email" required>
+            <button class="btn-code" id="btnRegCode" type="button">获取验证码</button>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="regCode">验证码</label>
+          <input class="input" id="regCode" type="text" inputmode="numeric" placeholder="6 位数字" autocomplete="one-time-code" required>
+        </div>
+        <div class="auth-field">
+          <label for="regPass">设置密码</label>
+          <input class="input" id="regPass" type="password" placeholder="至少 6 位，登录时要用" autocomplete="new-password" required>
+        </div>
+        <button class="btn btn-main auth-submit" id="btnRegSubmit" type="submit">注册并登录</button>
+      </form>
+    </div>
+
+    <div class="auth-pane" data-pane="forgot">
+      <form id="formForgot" autocomplete="on">
+        <div class="auth-field">
+          <label for="fpEmail">注册时用的邮箱</label>
+          <div class="auth-input-row">
+            <input class="input" id="fpEmail" type="email" placeholder="your@email.com" autocomplete="email" required>
+            <button class="btn-code" id="btnFpCode" type="button">获取验证码</button>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="fpCode">验证码</label>
+          <input class="input" id="fpCode" type="text" inputmode="numeric" placeholder="6 位数字" autocomplete="one-time-code" required>
+        </div>
+        <div class="auth-field">
+          <label for="fpPass">新密码</label>
+          <input class="input" id="fpPass" type="password" placeholder="至少 6 位" autocomplete="new-password" required>
+        </div>
+        <button class="btn btn-main auth-submit" id="btnFpSubmit" type="submit">重设密码</button>
+      </form>
+      <div class="auth-foot"><button type="button" id="backLogin">返回登录</button></div>
+    </div>
+
+    <div class="auth-msg" id="authMsg"></div>
+
+    <div class="auth-note">
+      只需一个邮箱就能用，不用记复杂的东西<br>
+      登录后，所有人都能看到逗号的打卡记录和照片
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js"></script>
+<script src="assets/js/store.js?v=2.1.0"></script>
+<script src="assets/js/app.js?v=2.1.0"></script>
+</body>
+</html>
